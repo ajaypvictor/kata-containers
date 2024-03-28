@@ -50,6 +50,8 @@ There are several kinds of Kata configurations and they are listed below.
 | `io.katacontainers.config.hypervisor.default_max_vcpus` | uint32| the maximum number of vCPUs allocated for the VM by the hypervisor |
 | `io.katacontainers.config.hypervisor.default_memory` | uint32| the memory assigned for a VM by the hypervisor in `MiB` |
 | `io.katacontainers.config.hypervisor.default_vcpus` | uint32| the default vCPUs assigned for a VM by the hypervisor |
+| `io.katacontainers.config.hypervisor.remote_memory` | uint32| the memory assigned for a VM by the remote hypervisor in `MiB` |
+| `io.katacontainers.config.hypervisor.remote_vcpus` | uint32| the vCPUs assigned for a VM by the remote hypervisor |
 | `io.katacontainers.config.hypervisor.disable_block_device_use` | `boolean` | disallow a block device from being used |
 | `io.katacontainers.config.hypervisor.disable_image_nvdimm` | `boolean` | specify if a `nvdimm` device should be used as rootfs for the guest (QEMU) |
 | `io.katacontainers.config.hypervisor.disable_vhost_net` | `boolean` | specify if `vhost-net` is not available on the host |
@@ -81,6 +83,7 @@ There are several kinds of Kata configurations and they are listed below.
 | `io.katacontainers.config.hypervisor.kernel` | string | the kernel used to boot the container VM |
 | `io.katacontainers.config.hypervisor.machine_accelerators` | string | machine specific accelerators for the hypervisor |
 | `io.katacontainers.config.hypervisor.machine_type` | string | the type of machine being emulated by the hypervisor |
+| `io.katacontainers.config.hypervisor.remote_machine_type` | string | the type of machine to be created by the remote hypervisor |
 | `io.katacontainers.config.hypervisor.memory_offset` | uint64| the memory space used for `nvdimm` device by the hypervisor |
 | `io.katacontainers.config.hypervisor.memory_slots` | uint32| the memory slots assigned to the VM by the hypervisor |
 | `io.katacontainers.config.hypervisor.msize_9p` | uint32 | the `msize` for 9p shares |
