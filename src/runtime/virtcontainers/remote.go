@@ -76,9 +76,9 @@ func (rh *remoteHypervisor) CreateVM(ctx context.Context, id string, network Net
 	annotations := map[string]string{}
 	annotations[cri.SandboxName] = hypervisorConfig.SandboxName
 	annotations[cri.SandboxNamespace] = hypervisorConfig.SandboxNamespace
-	annotations[hypannotations.MachineType] = hypervisorConfig.HypervisorMachineType
-	annotations[hypannotations.DefaultVCPUs] = strconv.FormatUint(uint64(hypervisorConfig.NumVCPUs()), 10)
-	annotations[hypannotations.DefaultMemory] = strconv.FormatUint(uint64(hypervisorConfig.MemorySize), 10)
+	annotations[hypannotations.RemoteMachineType] = hypervisorConfig.HypervisorMachineType
+	annotations[hypannotations.RemoteVCPUs] = strconv.FormatUint(uint64(hypervisorConfig.NumVCPUs()), 10)
+	annotations[hypannotations.RemoteMemory] = strconv.FormatUint(uint64(hypervisorConfig.MemorySize), 10)
 
 	req := &pb.CreateVMRequest{
 		Id:                   id,

@@ -185,6 +185,17 @@ pub const KATA_ANNO_CFG_HYPERVISOR_DEFAULT_VCPUS: &str =
 pub const KATA_ANNO_CFG_HYPERVISOR_DEFAULT_MAX_VCPUS: &str =
     "io.katacontainers.config.hypervisor.default_max_vcpus";
 
+// Remote Hypervisor CPU related annotations
+/// A sandbox annotation to specify the type of machine to be created by the remote hypervisor.
+pub const KATA_ANNO_CFG_HYPERVISOR_REMOTE_MACHINE_TYPE: &str =
+    "io.katacontainers.config.hypervisor.remote_machine_type";
+/// A sandbox annotation for passing the vCPUs assigned for a VM by the remote hypervisor.
+pub const KATA_ANNO_CFG_HYPERVISOR_REMOTE_VCPUS: &str =
+    "io.katacontainers.config.hypervisor.remote_vcpus";
+/// A sandbox annotation for the memory assigned for a VM by the hypervisor.
+pub const KATA_ANNO_CFG_HYPERVISOR_REMOTE_MEMORY: &str =
+    "io.katacontainers.config.hypervisor.remote_memory";
+
 // Hypervisor Device related annotations
 /// A sandbox annotation used to indicate if devices need to be hotplugged on the root bus instead
 /// of a bridge.

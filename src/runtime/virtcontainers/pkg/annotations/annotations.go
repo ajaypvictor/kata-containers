@@ -96,6 +96,9 @@ const (
 	// MachineType is a sandbox annotation to specify the type of machine being emulated by the hypervisor.
 	MachineType = kataAnnotHypervisorPrefix + "machine_type"
 
+	// MachineType is a sandbox annotation to specify the type of machine being emulated by the hypervisor.
+	RemoteMachineType = kataAnnotHypervisorPrefix + "remote_machine_type"
+
 	// MachineAccelerators is a sandbox annotation to specify machine specific accelerators for the hypervisor.
 	MachineAccelerators = kataAnnotHypervisorPrefix + "machine_accelerators"
 
@@ -145,12 +148,18 @@ const (
 	// DefaultVCPUs is a sandbox annotation that specifies the maximum number of vCPUs allocated for the VM by the hypervisor.
 	DefaultMaxVCPUs = kataAnnotHypervisorPrefix + "default_max_vcpus"
 
+	// RemoteVCPUs is a sandbox annotation for passing the default vcpus assigned for a VM by the remote hypervisor.
+	RemoteVCPUs = kataAnnotHypervisorPrefix + "remote_vcpus"
+
 	//
 	// Memory related annotations
 	//
 
 	// DefaultMemory is a sandbox annotation for the memory assigned for a VM by the hypervisor.
 	DefaultMemory = kataAnnotHypervisorPrefix + "default_memory"
+
+	// RemoteMemory is a sandbox annotation for the memory assigned for a VM by the hypervisor.
+	RemoteMemory = kataAnnotHypervisorPrefix + "remote_memory"
 
 	// MemSlots is a sandbox annotation to specify the memory slots assigned to the VM by the hypervisor.
 	MemSlots = kataAnnotHypervisorPrefix + "memory_slots"
