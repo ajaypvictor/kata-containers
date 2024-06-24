@@ -51,6 +51,12 @@ type HypervisorConfig struct {
 	// emulated.
 	HypervisorMachineType string
 
+	// ImageType is used to indicate the type of the image chosen for the remote hypervisor.
+	ImageType string
+
+	// OSType is used to indicate the type of the OS chosen for the remote hypervisor.
+	OSType string
+
 	// MemoryPath is the memory file path of VM memory. Used when either BootToBeTemplate or
 	// BootFromTemplate is true.
 	MemoryPath string

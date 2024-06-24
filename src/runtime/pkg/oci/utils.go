@@ -471,6 +471,18 @@ func addHypervisorConfigOverrides(ocispec specs.Spec, config *vc.SandboxConfig, 
 		return err
 	}
 
+	if value, ok := ocispec.Annotations[vcAnnotations.ImageType]; ok {
+		if value != "" {
+			config.HypervisorConfig.ImageType = value
+		}
+	}
+
+	if value, ok := ocispec.Annotations[vcAnnotations.OSType]; ok {
+		if value != "" {
+			config.HypervisorConfig.OSType = value
+		}
+	}
+
 	if value, ok := ocispec.Annotations[vcAnnotations.MachineType]; ok {
 		if value != "" {
 			config.HypervisorConfig.HypervisorMachineType = value

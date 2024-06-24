@@ -243,6 +243,16 @@ const (
 
 	// EnableRootlessHypervisor is a sandbox annotation to enable rootless hypervisor (only supported in QEMU currently).
 	EnableRootlessHypervisor = kataAnnotHypervisorPrefix + "rootless"
+
+	//
+	// Remote Hypervisor related annotations
+	//
+
+	// ImageType is a sandbox annotation to decide the type of the image chosen for the remote hypervisor.
+	ImageType = kataAnnotHypervisorPrefix + "image_type"
+
+	// OSType is a sandbox annotation to decide the type of the OS chosen for the remote hypervisor.
+	OSType = kataAnnotHypervisorPrefix + "os_type"
 )
 
 // Runtime related annotations
